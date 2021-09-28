@@ -7,10 +7,8 @@ def handler_thresh(x):
 
 def main():
     thresh_value = 100
-    alpha_percent = 50
     cv.namedWindow('motion',cv.WINDOW_NORMAL)
     cv.createTrackbar('Threshold', 'motion', thresh_value, 255, handler_thresh)
-    cv.createTrackbar('Threshold', 'alpha', alpha_percent , 255, handler_thresh)
     vdofile = 'depth.avi'
     cap = cv.VideoCapture(vdofile)
     if not cap.isOpened():
