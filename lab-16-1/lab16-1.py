@@ -9,7 +9,8 @@ def main():
     thresh_value = 100
     cv.namedWindow('motion',cv.WINDOW_NORMAL)
     cv.createTrackbar('Threshold', 'motion', thresh_value, 255, handler_thresh)
-    vdofile = 'depth.avi'
+    # vdofile = 'depth.avi'
+    vdofile = 'circle_move.mp4'
     cap = cv.VideoCapture(vdofile)
     if not cap.isOpened():
         print("Cannot open vdo")
